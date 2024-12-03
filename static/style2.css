@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Changed from black to dark grey */
+    font-family: "Poppins", sans-serif !important;
+    
+}
+
+/* Universal styles for all elements */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif !important;
+}
+
+/* Navigation bar styles */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background: transparent;
+}
+
+nav2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+nav3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.wrapper {
+    opacity: 0;
+    width: 600px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    border-radius: 100px;
+    padding: 30px 40px;
+    position: absolute; 
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+    display: flex;
+    flex-direction: column; /* Stack text boxes vertically */
+    justify-content: space-between;
+    animation: fadeIn 1s ease-in forwards; 
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    animation-delay: 0.5s;
+    height: auto; /* Automatically adjust height based on content */
+}
+
+.input-box input {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 40px;
+    color: #f18add;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 10px 50px; 
+    animation: fadeIn 1s ease-in forwards; 
+    animation-delay: 1.25s;
+}
+
+.input-box input::placeholder {
+    color: #f18add
+}
+
+.title-text {
+    opacity: 0;
+    font-size: 2rem; /* Set font size */
+    font-weight: bold; /* Bold text */
+    background: linear-gradient(90deg, #852b9c, #bf5570, #852b9c); /* Define the gradient */
+    -webkit-background-clip: text; /* Clip the gradient to the text */
+    -webkit-text-fill-color: transparent; /* Make text transparent to reveal gradient */
+    animation: fadeIn 1s linear forwards;
+}
+
+.logo-text {
+    opacity: 0;
+    font-size: 2rem; /* Set font size */
+    font-weight: bold; /* Bold text */
+    background: transparent;
+    -webkit-text-stroke: 1px #f18add; /* Outline with desired color */
+    -webkit-text-fill-color: transparent; /* Make text transparent to reveal gradient */
+    animation: fadeIn 1s ease-in forwards; 
+    animation-delay: 0.75s;
+}
+
+
+.logo-text2 {
+    opacity: 0;
+    font-size: 2rem; /* Set font size */
+    font-weight: bold; /* Bold text */
+    background: transparent;
+    -webkit-text-stroke: 1px #f18add; /* Outline with desired color */
+    -webkit-text-fill-color: transparent; /* Make text transparent to reveal gradient */    padding-top: 50px;
+    animation: fadeIn 1s ease-in forwards; 
+    animation-delay: 0.75s;
+}
+
+.error-text {
+    opacity: 0;
+    background: linear-gradient(360deg, #bf5570, #ffffff); /* Define the gradient */
+    -webkit-text-fill-color: transparent; /* Make text transparent to reveal gradient */
+    -webkit-background-clip: text;
+    font-weight: bold; /* Make it stand out */
+    animation: fadeIn 1s ease-in forwards; /* Ensure final state remains after animation */
+    animation-delay: 1.75s;
+}
+
+.nav-container {
+    display: flex; /* Horizontal layout for logo and text */
+    align-items: center; /* Vertically align items */
+    justify-content: center;
+}
+
+/* Hero section styles */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    align-items: center;
+    background-size: cover;
+    background-image: linear-gradient(
+    rgba(0, 0, 0, 0.40), 
+    rgba(0, 0, 0, 0.40) 
+  ), url('background.jpg'); /* Set your background image here */
+    /* Optional: Add a fallback background color */
+    background-color: #1a1a1a;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.text-section{
+    text-align: center;
+    font-weight: normal; /* Bold text */
+
+}
+
+.text-section h1 {
+    font-size: 2rem; /* Adjust font size as needed */
+    color: #fff; /* White text */
+    font-weight: normal; /* Regular weight */
+}
+
+.btn {
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 50px;
+    color: #fff;
+    background-image: linear-gradient(80deg, #bf5570, #30263f, #852b9c);
+    font-size: 20px;
+    border-radius: 40px;
+    opacity: 0; /* Initially hidden */
+    animation: fadeIn 1s ease-in forwards;
+    animation-delay: 1.25s; /* Start after 1.75 seconds */
+    font-weight: 100;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transition: 0.5s;
+}
+
+.anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+
+.btn.visible {
+    opacity: 1; /* Fully visible */
+}
+
+.btn:hover {
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Keyframes for the moveup animation */
+@keyframes moveup {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    100% {
+      opacity: 1;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #575757;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

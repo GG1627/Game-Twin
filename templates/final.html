@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Head content remains the same -->
+    <link rel="stylesheet" href="static/style4.css">
+</head>
+<body>
+    <div class="hero">
+        <span class="time-display">{{ time_taken }}</span>
+        <a href="{{ url_for('next_page') }}" class="btn">Twin Another Game</a>
+            <div class="nav1">
+                <div class="nav-container wrapper1">
+                    <span class="logo-text">{{ game }}</span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="image-center">
+                    <img src="static/equivalent-to.png" alt="spinning image" class="spinning-image">
+                </div>
+            </div>
+            <div class="nav2">
+                <div class="nav-container wrapper2">
+                    <span class="logo-text2">
+                        <ul class="game-list">
+                            {% for game in games %}
+                                <li class="game-item">{{ game }}</li>
+                            {% endfor %}
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

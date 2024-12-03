@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Game Twin</title>
+        <!-- Link to your CSS file -->
+        <link rel="stylesheet" href="static/style2.css">
+    </head>
+    <body>
+        <div class="hero">
+            <div class="wrapper">
+                <nav>
+                    <h1 class="title-text">First, we need some things:</h1>
+                </nav>
+                <div class="input-box">
+                    <form action="{{ url_for('next_page') }}" method="POST">
+                    <h1 class="logo-text">Enter Game Name:</h1>
+                    <input type="text" name="game_name" placeholder="Enter Name as Found on Metacritic (Case Sensitive)">
+                    <h1 class="logo-text2">Enter Game Console:</h1>
+                    <input type="text" name="game_console" placeholder="Enter Console as Found on Metacritic (Case Sensitive)">
+                    <nav2>
+                        <button type="submit" class="btn">Continue</button>
+                    </nav2>
+                    <nav3>
+                    {% if error_message %}
+                        <p class="error-text">{{ error_message }}</p>
+                    {% endif %}
+                    </nav3>
+                    </form>
+                </div>
+            </div>
+    </div>
+    </body>
+</html>

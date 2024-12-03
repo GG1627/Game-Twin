@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Game Twin</title>
+        <!-- Link to your CSS file -->
+        <link rel="stylesheet" href="static/style3.css">
+    </head>
+    <body>
+        <div class="hero">
+            <div class="wrapper">
+                <nav>
+                    <h1 class="title-text">Choose Your Sorting Algorithm:</h1>
+                </nav>
+            <form action="{{ url_for('sorting_page')}}" method="POST">
+                <div class="option-container">
+                    <label class="option">
+                        <input type="radio" name="algorithm" value="1" checked>
+                        <span class="circle"></span>
+                        Quick Sort
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="algorithm" value="2">
+                        <span class="circle"></span>
+                        Cocktail Sort
+                    </label>
+                </div>
+                <nav>
+                    <h1 class="title-text2">Refine Your Search Criteria</h1>
+                </nav>
+                <div class="option2-container">
+                    <label class="option2">
+                        <input type="radio" name="search-criteria" value="1" checked>
+                        <span class="circle"></span>
+                        Metacritic Rating
+                    </label>
+                    <label class="option2">
+                        <input type="radio" name="search-criteria" value="2">
+                        <span class="circle"></span>
+                        Achievement Count
+                    </label>
+                    <label class="option2">
+                        <input type="radio" name="search-criteria" value="3">
+                        <span class="circle"></span>
+                        Suggestion Count
+                    </label>
+                </div>
+                <div class="input-box">
+                    <nav2>
+                        <button type="submit" class="btn">Find Twin</button>
+                    </nav2>
+                </div>
+            </div>
+    </div>
+    </body>
+</html>
