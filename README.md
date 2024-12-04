@@ -1,5 +1,7 @@
 <h3 align="center">Game Twin</h3>
+
 ![Screenshot 2024-12-04 124835](https://github.com/user-attachments/assets/96f2d60c-43a8-4071-8c2f-26a637bbad60)
+
 # Collaborators:
 - Alejandro Gonzalez - https://github.com/alejgonza04
 - Gael Garcia - https://github.com/GG1627
