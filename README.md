@@ -38,7 +38,7 @@ Game Twin is a web application designed to help you relive the joy of your favor
 ![Screenshot 2024-12-04 124910](https://github.com/user-attachments/assets/4b2996b0-bcee-43d5-bf1c-28b87cd4afab)
 
 - Users are shown the time taken by the sorting algorithm and are given a list of games that meet their search criteria and what those values are.
-- 
+
 # Resources
 https://www.kaggle.com/datasets/jummyegg/rawg-game-dataset
 
