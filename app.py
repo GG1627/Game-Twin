@@ -61,13 +61,13 @@ def sorting_page():
         cpp_output = process.stdout
         print(cpp_output)
         # process the output to extract the list of games
-        lines = cpp_output.splitlines()  # Split output into individual lines
+        lines = cpp_output.splitlines()  # split output into individual lines
 
         if any("Game not found." in line for line in lines):
             error_message = "Game was not found, please try another title"
             return render_template('next.html', error_message=error_message)
         
-        formatted_output = []  # To store structured output
+        formatted_output = []  # to store structured output
         game_name = inputs.get('game_name')  
         time_taken = None    
         for i in range(len(lines)):
@@ -75,7 +75,7 @@ def sorting_page():
                 # add the numbered line
                 entry = lines[i].strip()
                 # check if there's a next line with "Metacritic:" information
-                if i + 1 < len(lines) and "Metacritic:" in lines[i + 1]:
+                if i + 1 < len(lines):
                     entry += f"\n{lines[i + 1].strip()}"
                 formatted_output.append(entry)
         if lines:

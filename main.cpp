@@ -93,12 +93,15 @@ int main(){
         cout <<  (p+1) << ". ";
         if(sortBySelection == 1) {
             similarGames[p].displayByMetacritic();
+            cout << "\n";
         }
         else if(sortBySelection == 2){
             similarGames[p].displayByAchievementCount();
+            cout << "\n";
         }
         else if(sortBySelection == 3){
             similarGames[p].displayBySuggestionCount();
+            cout << "\n";
         }
     }
 
