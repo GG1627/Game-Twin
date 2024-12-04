@@ -2,6 +2,7 @@
 #include <utility>
 using namespace std;
 
+//cocktail sorts cited from geeksforgeeks.org
 void SortingAlgorithms::cocktailSortMetacritic(vector<Game>& games, int size) {
     {
         bool swapped = true;
@@ -12,7 +13,7 @@ void SortingAlgorithms::cocktailSortMetacritic(vector<Game>& games, int size) {
             swapped = false;
 
             for (int i = start; i < end; ++i) {
-                if (games[i].metacritic > games[i + 1].metacritic) {
+                if (games[i].metacritic < games[i + 1].metacritic) {
                     swap(games[i], games[i + 1]);
                     swapped = true;
                 }
@@ -24,7 +25,7 @@ void SortingAlgorithms::cocktailSortMetacritic(vector<Game>& games, int size) {
             --end;
 
             for (int i = end - 1; i >= start; --i) {
-                if (games[i].metacritic > games[i + 1].metacritic) {
+                if (games[i].metacritic < games[i + 1].metacritic) {
                     swap(games[i], games[i + 1]);
                     swapped = true;
                 }
@@ -45,7 +46,7 @@ void SortingAlgorithms::cocktailSortAchievementCount(vector<Game>& games, int si
             swapped = false;
 
             for (int i = start; i < end; ++i) {
-                if (games[i].achievementCount > games[i + 1].achievementCount) {
+                if (games[i].achievementDifference > games[i + 1].achievementDifference) {
                     swap(games[i], games[i + 1]);
                     swapped = true;
                 }
@@ -57,7 +58,7 @@ void SortingAlgorithms::cocktailSortAchievementCount(vector<Game>& games, int si
             --end;
 
             for (int i = end - 1; i >= start; --i) {
-                if (games[i].achievementCount > games[i + 1].achievementCount) {
+                if (games[i].achievementDifference > games[i + 1].achievementDifference) {
                     swap(games[i], games[i + 1]);
                     swapped = true;
                 }
@@ -79,7 +80,7 @@ void SortingAlgorithms::cocktailSortSuggestionsCount(vector<Game> &games, int si
             swapped = false;
 
             for (int i = start; i < end; ++i) {
-                if (games[i].suggestionsCount > games[i + 1].suggestionsCount) {
+                if (games[i].suggestionsCount < games[i + 1].suggestionsCount) {
                     swap(games[i], games[i + 1]);
                     swapped = true;
                 }
@@ -91,7 +92,7 @@ void SortingAlgorithms::cocktailSortSuggestionsCount(vector<Game> &games, int si
             --end;
 
             for (int i = end - 1; i >= start; --i) {
-                if (games[i].suggestionsCount > games[i + 1].suggestionsCount) {
+                if (games[i].suggestionsCount < games[i + 1].suggestionsCount) {
                     swap(games[i], games[i + 1]);
                     swapped = true;
                 }
@@ -102,7 +103,7 @@ void SortingAlgorithms::cocktailSortSuggestionsCount(vector<Game> &games, int si
     }
 };
 
-
+// quicksorts cited from aman lecture slides
 void SortingAlgorithms::quickSortMetacritic(vector<Game>& games, int low, int high) {
     if (low < high)
     {
@@ -149,19 +150,19 @@ void SortingAlgorithms::quickSortAchievmentCount(vector<Game> &games, int low, i
 
 
 int SortingAlgorithms::partitionAchievmentCount(vector<Game> &games, int low, int high) {
-    double pivot = games[low].achievementCount;
+    double pivot = games[low].achievementDifference;
     int up = low, down = high;
 
     while(up < down)
     {
         for (int j = up; j < high; j++)
         {
-            if (games[up].achievementCount > pivot)
+            if (games[up].achievementDifference > pivot)
                 break;
             up++;
         }
         for (int j = high; j > low; j--) {
-            if(games[down].achievementCount < pivot)
+            if(games[down].achievementDifference < pivot)
                 break;
             down--;
         }

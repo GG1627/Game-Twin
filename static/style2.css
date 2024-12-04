@@ -108,8 +108,8 @@ nav3 {
 
 .logo-text {
     opacity: 0;
-    font-size: 2rem; /* Set font size */
-    font-weight: bold; /* Bold text */
+    font-size: 2rem; 
+    font-weight: bold;
     background: transparent;
     -webkit-text-stroke: 1px #f18add; /* Outline with desired color */
     -webkit-text-fill-color: transparent; /* Make text transparent to reveal gradient */
@@ -120,28 +120,29 @@ nav3 {
 
 .logo-text2 {
     opacity: 0;
-    font-size: 2rem; /* Set font size */
-    font-weight: bold; /* Bold text */
+    font-size: 2rem; 
+    font-weight: bold;
     background: transparent;
-    -webkit-text-stroke: 1px #f18add; /* Outline with desired color */
-    -webkit-text-fill-color: transparent; /* Make text transparent to reveal gradient */    padding-top: 50px;
+    -webkit-text-stroke: 1px #f18add; 
+    -webkit-text-fill-color: transparent;
+    padding-top: 50px;
     animation: fadeIn 1s ease-in forwards; 
     animation-delay: 0.75s;
 }
 
 .error-text {
     opacity: 0;
-    background: linear-gradient(360deg, #bf5570, #ffffff); /* Define the gradient */
-    -webkit-text-fill-color: transparent; /* Make text transparent to reveal gradient */
+    background: linear-gradient(360deg, #bf5570, #ffffff); 
+    -webkit-text-fill-color: transparent; 
     -webkit-background-clip: text;
-    font-weight: bold; /* Make it stand out */
+    font-weight: bold; 
     animation: fadeIn 1s ease-in forwards; /* Ensure final state remains after animation */
     animation-delay: 1.75s;
 }
 
 .nav-container {
-    display: flex; /* Horizontal layout for logo and text */
-    align-items: center; /* Vertically align items */
+    display: flex; 
+    align-items: center; 
     justify-content: center;
 }
 

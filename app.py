@@ -59,6 +59,7 @@ def sorting_page():
             check=True
         )
         cpp_output = process.stdout
+        print(cpp_output)
         # process the output to extract the list of games
         lines = cpp_output.splitlines()  # Split output into individual lines
 

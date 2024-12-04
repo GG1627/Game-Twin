@@ -16,8 +16,6 @@ body {
     padding: 0;
 }
 
-/* Hero Section */
-/* Adjusted Hero Section */
 .hero {
     overflow: auto; /* Allows vertical and horizontal scrolling */
     width: 100%;
@@ -37,26 +35,24 @@ body {
     position: relative; /* Added for positioning context */
 }
 
-/* Flex Container */
 .container {
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping */
-    gap: 10px; /* Adds space between items */
-    align-items: center; /* Center vertically */
-    justify-content: space-evenly; /* Equal spacing between nav1, image-center, and nav2 */
-    padding: 0 20px; /* Optional: add padding for spacing */
+    flex-wrap: nowrap; 
+    gap: 10px; 
+    align-items: center; 
+    justify-content: space-evenly;
+    padding: 0 20px; 
 }
 
-/* Centering Container */
 .image-center-container {
-    position: relative; /* Establish positioning context for children */
+    position: relative; 
     display: flex;
-    flex-direction: column; /* Stack image and button */
-    align-items: center; /* Center children horizontally */
-    justify-content: center; /* Center children vertically */
-    margin: 20px auto; /* Center the container horizontally with some margin */
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center; 
+    margin: 20px auto; 
 }
 
 /* Navigation Styles */
@@ -76,35 +72,35 @@ body {
     display: flex;
     margin-left: auto; /* Increase space between image-center and nav2 */
     gap: 100px;
-    flex-direction: column; /* Stack internal elements vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center; 
     text-align: center;
 }
 
 .logo-text {
     opacity: 0;
-    max-width: 100%; /* Prevent overflow */
-    font-size: 2rem; /* Adjust font size as needed */
+    max-width: 100%; 
+    font-size: 2rem; 
     font-weight: bold;
     background: linear-gradient(360deg,#852b9c, #ffffff); /* Define the gradient */
-    -webkit-text-fill-color: transparent; /* Make text transparent to reveal gradient */   
+    -webkit-text-fill-color: transparent; 
     -webkit-background-clip: text;
     animation: fadeIn 1s linear forwards;
 }
 
 .logo-text2 {
-    margin-top: 30px; /* Space between logo and nav-text */
+    margin-top: 30px;
     opacity: 0;
-    max-width: 100%; /* Prevent overflow beyond the parent container */
-    font-size: 1rem; /* Adjust font size as needed */
+    max-width: 100%; 
+    font-size: 1rem; 
     font-weight: bold;
-    background: linear-gradient(360deg, #852b9c, #ffffff); /* Define the gradient */
-    -webkit-text-fill-color: transparent; /* Make text transparent to reveal gradient */
+    background: linear-gradient(360deg, #852b9c, #ffffff); 
+    -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     animation: fadeIn 1s linear forwards;
     animation-delay: 1.80s;
-    margin-bottom: 10px; /* Space between logo and nav-text */
+    margin-bottom: 10px;
     white-space: normal; /* Allow text to wrap to the next line */
     word-wrap: break-word; /* Ensure long words break within the bounds */
     overflow-wrap: break-word; /* Same as word-wrap but more compatible */
@@ -117,21 +113,21 @@ body {
     position: absolute; /* Remove from normal document flow */
     top: 30px; /* Position at the top of the screen */
     left: 50%; /* Center horizontally */
-    background: linear-gradient(360deg, #bf5570, #ffffff); /* Define the gradient */
-    -webkit-text-fill-color: transparent; /* Make text transparent to reveal gradient */
+    background: linear-gradient(360deg, #bf5570, #ffffff); 
+    -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     transform: translateX(-50%); /* Adjust to truly center */
     font-size: 1.5rem; /* Adjust the font size */
-    font-weight: bold; /* Make it stand out */
-    padding: 10px 20px; /* Add padding around the text */
+    font-weight: bold; 
+    padding: 10px 20px;
     z-index: 100; /* Ensure it stays above other elements */
-    animation: fadeIn 1s ease-in forwards; /* Ensure final state remains after animation */
+    animation: fadeIn 1s ease-in forwards; 
     animation-delay: 3s;
 }
 
 .btn {
     position: absolute; /* Remove from normal document flow */
-    top: 500px; /* Position at the top of the screen */
+    bottom: 16%; /* Position at the top of the screen */
     left: 50%; /* Center horizontally */
     cursor: pointer;
     display: inline-block;
@@ -149,13 +145,14 @@ body {
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
     transition: 0.5s;
+    z-index: 100; /* Ensure it stays above other elements */
 }
 
 .nav-text {
     font-size: 1.2rem;
     color: #fff;
     animation-delay: 10s;
-    margin-bottom: 5px; /* Space between nav items */
+    margin-bottom: 5px; 
     animation: moveup 1s linear forwards;
 }
 
@@ -171,7 +168,7 @@ body {
     width: 200px;
     opacity: 0;
     animation: spin-and-fade 3s ease-out forwards;
-    animation-delay: 0.5s; /* Delay the animation by 1 second */
+    animation-delay: 0.5s; 
 }
 
 .wrapper2 {
@@ -188,18 +185,18 @@ body {
     flex-direction: column; /* Stack content vertically */
     align-items: center;
     margin-right: 40px;
-    justify-content: flex-start; /* Align content at the top */
+    justify-content: flex-start; 
     animation: moveup 1s linear forwards;
-    animation-delay: 1.80s; /* Delay the animation by 1 second */
-    box-sizing: border-box; /* Include padding and border in dimensions */
-    overflow: hidden; /* Prevent content from visually overflowing */
+    animation-delay: 1.80s; 
+    box-sizing: border-box;
+    overflow: hidden; 
 }
 
 
 
 .wrapper1 {
     flex: 0 0 auto; /* Prevent flex-grow/shrink; maintain size */
-    width: 450px; /* Set the desired width */
+    width: 450px;
     opacity: 0;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, 0.5);
@@ -215,7 +212,7 @@ body {
 }
 
 .btn.visible {
-    opacity: 1; /* Fully visible */
+    opacity: 1; 
 }
 
 .btn:hover {
@@ -224,16 +221,15 @@ body {
 }
 
 .game-list {
-    list-style-type: none; /* Removes the bullet points */
-    padding: 0;            /* Removes default padding from the list */
-    margin: 0;             /* Removes default margin from the list */
+    list-style-type: none; 
+    padding: 0;           
+    margin: 0;             
 }
 
 .game-item {
     margin-bottom: 10px;   /* Adds some spacing between list items */
 }
 
-/* Keyframes and Animations */
 @keyframes spin-and-fade {
     0% {
         transform: rotate(0deg);

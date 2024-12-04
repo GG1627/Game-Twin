@@ -63,33 +63,33 @@ nav2 {
 
 .title-text {
     opacity: 0;
-    font-size: 1.5rem; /* Set font size */
-    font-weight: bold; /* Bold text */
-    background: linear-gradient(90deg, #852b9c, #bf5570, #852b9c); /* Define the gradient */
-    -webkit-background-clip: text; /* Clip the gradient to the text */
-    -webkit-text-fill-color: transparent; /* Make text transparent to reveal gradient */
+    font-size: 1.5rem; 
+    font-weight: bold;
+    background: linear-gradient(90deg, #852b9c, #bf5570, #852b9c); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     animation: fadeIn 1s linear forwards;
 }
 
 .title-text2 {
     padding-top: 30px;
     opacity: 0;
-    font-size: 1.5rem; /* Set font size */
-    font-weight: bold; /* Bold text */
-    background: linear-gradient(90deg, #852b9c, #bf5570, #852b9c); /* Define the gradient */
-    -webkit-background-clip: text; /* Clip the gradient to the text */
-    -webkit-text-fill-color: transparent; /* Make text transparent to reveal gradient */
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    background: linear-gradient(90deg, #852b9c, #bf5570, #852b9c); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
     animation: fadeIn 1s linear forwards;
     animation-delay: 1s;
 }
 
 .logo-text {
     opacity: 0;
-    font-size: 2rem; /* Set font size */
-    font-weight: bold; /* Bold text */
+    font-size: 2rem; 
+    font-weight: bold; 
     background: transparent;
-    -webkit-text-stroke: 1px #f18add; /* Outline with desired color */
-    -webkit-text-fill-color: transparent; /* Make text transparent to reveal gradient */
+    -webkit-text-stroke: 1px #f18add; 
+    -webkit-text-fill-color: transparent; 
     animation: fadeIn 1s ease-in forwards; 
     animation-delay: 0.75s;
 }
@@ -97,11 +97,12 @@ nav2 {
 
 .logo-text2 {
     opacity: 0;
-    font-size: 2rem; /* Set font size */
-    font-weight: bold; /* Bold text */
+    font-size: 2rem;
+    font-weight: bold;
     background: transparent;
-    -webkit-text-stroke: 1px #f18add; /* Outline with desired color */
-    -webkit-text-fill-color: transparent; /* Make text transparent to reveal gradient */    padding-top: 50px;
+    -webkit-text-stroke: 1px #f18add;
+    -webkit-text-fill-color: transparent;
+    padding-top: 50px;
     animation: fadeIn 1s ease-in forwards; 
     animation-delay: 0.75s;
 }
@@ -145,8 +146,8 @@ nav2 {
 .text-section h1 {
     font-size: 2rem; /* Adjust font size as needed */
     color: #fff; /* White text */
-    margin-bottom: 20px; /* Space below heading */
-    font-weight: normal; /* Regular weight */
+    margin-bottom: 20px; 
+    font-weight: normal; 
 }
 
 .btn {

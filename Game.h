@@ -11,38 +11,39 @@
 using namespace std;
 
 class Game{
-    public:
-        string name;
-        int metacritic;
-        double rating;
-        int achievementCount;
-        int suggestionsCount;
-        unordered_set<string> gameGenres;
-        unordered_set<string> gamePlatforms;
+public:
+    string name;
+    int metacritic;
+    double rating;
+    int achievementCount;
+    int achievementDifference;
+    int suggestionsCount;
+    unordered_set<string> gameGenres;
+    unordered_set<string> gamePlatforms;
 
     Game(const string& name,double metacritic, double rating, int suggestionsCount, int achievementCount, const unordered_set<string>& gameGenres,
          const unordered_set<string>& gamePlatforms){
-            this->name = name;
-            this->metacritic = metacritic;
-            this->rating = rating;
-            this->suggestionsCount = suggestionsCount;
-            this->achievementCount = achievementCount;
-            this->gameGenres = gameGenres;
-            this->gamePlatforms = gamePlatforms;
-        }
+        this->name = name;
+        this->metacritic = metacritic;
+        this->rating = rating;
+        this->suggestionsCount = suggestionsCount;
+        this->achievementCount = achievementCount;
+        this->gameGenres = gameGenres;
+        this->gamePlatforms = gamePlatforms;
+    }
 
-    void dispalyByMetacritic() const{
-        cout << "Name: " << name << " - ";
+    void displayByMetacritic() const{
+        cout << name << " - ";
         cout << "Metacritic Rating: " << metacritic << endl;
     }
 
     void displayByAchievementCount() const{
-        cout << "Name: " << name << " - ";
+        cout << name << " - ";
         cout << "Achievement Count: " << achievementCount << endl;
     }
 
     void displayBySuggestionCount() const{
-        cout << "Name: " << name << " - ";
+        cout << name << " - ";
         cout << "Suggestion Count: " << suggestionsCount << endl;
     }
 };

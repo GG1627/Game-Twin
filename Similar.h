@@ -3,34 +3,16 @@
 #include "Game.h"
 
 class Similar {
-    public:
+public:
     vector<Game>& gamesRef; // Reference to the vector of games
+    unordered_set<string> targetGamePlatforms;
+    unordered_set<string> targetGameGenres;
 
     explicit Similar(vector<Game>& allGames) : gamesRef(allGames) {}
-
-    const unordered_set<string>& getGenres(const string& gameName) const {
-        for(const auto& game : gamesRef) {
-            if(game.name == gameName) {
-                return game.gameGenres;
-            }
-        }
-        throw runtime_error("Game not found!");
-    }
-
-    const unordered_set<string>& getPlatforms(const string& gameName) const {
-        for(const auto& game : gamesRef) {
-            if(game.name == gameName) {
-                return game.gamePlatforms;
-            }
-        }
-        throw runtime_error("Game not found!");
-    }
-
-
-    vector<Game> extractGenre(const string& gameName);
-    vector<Game> extractPlatform(const string& gamePlatform, vector<Game> filteredGames);
+    Game findGame(string name);
+    pair<unordered_set<string>, unordered_set<string>> getParameters(string gameName);
+    vector<Game> extractParameters(string gameName, string gamePlatform);
+    void findDifference(string gameName, vector<Game>& similarGames);
 };
 
-
 #endif //VIDEO_GAME_RECOMMENDER_SIMILAR_H
-

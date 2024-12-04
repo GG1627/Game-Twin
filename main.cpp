@@ -44,8 +44,7 @@ int main(){
 
     Similar sim(op.games);
 
-    vector<Game> similarGames = sim.extractGenre(gameName);  // Call the function to get similar games
-    similarGames = sim.extractPlatform(gamePlatform, similarGames);  // Call the function to get similar games
+    vector<Game> similarGames = sim.extractParameters(gameName, gamePlatform);  // Call the function to get similar games
 
     int selection;
     cout << "Select 1 for a QuickSort, Select 2 for a CocktailSort." << endl;
@@ -59,12 +58,16 @@ int main(){
     if(selection == 1) {
         if(sortBySelection == 1){
             algo.quickSortMetacritic(similarGames, 0 ,similarGames.size()-1);
+            reverse(similarGames.begin(), similarGames.end());
+
         }
         else if(sortBySelection == 2){
+            sim.findDifference(gameName, similarGames);
             algo.quickSortAchievmentCount(similarGames, 0 ,similarGames.size()-1);
         }
         else if(sortBySelection == 3){
             algo.quickSortSuggestionsCount(similarGames, 0 ,similarGames.size()-1);
+            reverse(similarGames.begin(), similarGames.end());
         }
     }
     else if(selection == 2){
@@ -72,10 +75,11 @@ int main(){
             algo.cocktailSortMetacritic(similarGames, similarGames.size());
         }
         else if(sortBySelection == 2){
+            sim.findDifference(gameName, similarGames);
             algo.cocktailSortAchievementCount(similarGames, similarGames.size());
         }
         else if(sortBySelection == 3){
-            algo.cocktailSortSuggestionsCount(similarGames, similarGames.size());
+            algo.cocktailSortSuggestionsCount(similarGames,similarGames.size());
         }
     }
 
@@ -83,75 +87,19 @@ int main(){
 
     std::chrono::duration<double, std::milli> elapsed = end - start;
 
-    // reverse the vector for in order printing
-    reverse(similarGames.begin(), similarGames.end());
+//    // reverse the vector for in order printing
+//    reverse(similarGames.begin(), similarGames.end());
     for(int p=0; p < 5; p++){
-            if(p==0){
-                cout << "1. ";
-                if(sortBySelection == 1) {
-                    similarGames[p].dispalyByMetacritic();
-                }
-                else if(sortBySelection == 2){
-                    similarGames[p].displayByAchievementCount();
-                }
-                else if(sortBySelection == 3){
-                    similarGames[p].displayBySuggestionCount();
-                }
-                cout << "\n" << endl;
-            }
-            else if(p==1){
-                cout << "2. ";
-                if(sortBySelection == 1) {
-                    similarGames[p].dispalyByMetacritic();
-                }
-                else if(sortBySelection == 2){
-                    similarGames[p].displayByAchievementCount();
-                }
-                else if(sortBySelection == 3){
-                    similarGames[p].displayBySuggestionCount();
-                }
-                cout << "\n" << endl;
-                
-            }
-            else if(p==2){
-                cout << "3. ";
-                if(sortBySelection == 1) {
-                    similarGames[p].dispalyByMetacritic();
-                }
-                else if(sortBySelection == 2){
-                    similarGames[p].displayByAchievementCount();
-                }
-                else if(sortBySelection == 3){
-                    similarGames[p].displayBySuggestionCount();
-                }
-                cout << "\n" << endl;
-            }
-            else if(p==3){
-                cout << "4. ";
-                if(sortBySelection == 1) {
-                    similarGames[p].dispalyByMetacritic();
-                }
-                else if(sortBySelection == 2){
-                    similarGames[p].displayByAchievementCount();
-                }
-                else if(sortBySelection == 3){
-                    similarGames[p].displayBySuggestionCount();
-                }
-                cout << "\n" << endl;
-            }
-            else if(p==4){
-                cout << "5. ";
-                if(sortBySelection == 1) {
-                    similarGames[p].dispalyByMetacritic();
-                }
-                else if(sortBySelection == 2){
-                    similarGames[p].displayByAchievementCount();
-                }
-                else if(sortBySelection == 3){
-                    similarGames[p].displayBySuggestionCount();
-                }
-                cout << "\n" << endl;
-            }
+        cout <<  (p+1) << ". ";
+        if(sortBySelection == 1) {
+            similarGames[p].displayByMetacritic();
+        }
+        else if(sortBySelection == 2){
+            similarGames[p].displayByAchievementCount();
+        }
+        else if(sortBySelection == 3){
+            similarGames[p].displayBySuggestionCount();
+        }
     }
 
     std::cout << "Time of sorting method: " << elapsed.count() << " ms\n";
