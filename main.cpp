@@ -32,7 +32,6 @@ int main(){
     for(size_t i=0; i < op.games.size(); i++){
         if(op.games[i].name == gameName){
             cout << "Game found" << endl;
-//            op.games[i].dispalyByMetacritic();
             gameFound = true;
             break;
         }
@@ -84,11 +83,8 @@ int main(){
     }
 
     auto end = std::chrono::high_resolution_clock::now();
-
     std::chrono::duration<double, std::milli> elapsed = end - start;
 
-//    // reverse the vector for in order printing
-//    reverse(similarGames.begin(), similarGames.end());
     for(int p=0; p < 5; p++){
         cout <<  (p+1) << ". ";
         if(sortBySelection == 1) {
