@@ -157,7 +157,6 @@ nav3 {
     rgba(0, 0, 0, 0.40), 
     rgba(0, 0, 0, 0.40) 
   ), url('background.jpg'); /* set your background image here */
-    /* optional: Add a fallback background color */
     background-color: #1a1a1a;
 }
 
