@@ -5,8 +5,6 @@
 class Similar {
 public:
     vector<Game>& gamesRef; // Reference to the vector of games
-    unordered_set<string> targetGamePlatforms;
-    unordered_set<string> targetGameGenres;
 
     explicit Similar(vector<Game>& allGames) : gamesRef(allGames) {}
     Game findGame(string name);
