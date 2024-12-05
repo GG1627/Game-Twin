@@ -3,12 +3,12 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a; /* Changed from black to dark grey */
+    background-color: #1a1a1a; /* changed from black to dark grey */
     font-family: "Poppins", sans-serif !important;
     
 }
 
-/* Universal styles for all elements */
+/* universal styles for all elements */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -16,7 +16,7 @@ body {
     font-family: "Poppins", sans-serif !important;
 }
 
-/* Navigation bar styles */
+/* navigation bar styles */
 nav {
     display: flex;
     justify-content: center;
@@ -32,11 +32,11 @@ nav {
 }
 
 .logo-text {
-    font-size: 5rem; /* Set font size */
-    font-weight: bold; /* Bold text */
-    background: linear-gradient(90deg, #852b9c, #bf5570, #852b9c); /* Define the gradient */
-    -webkit-background-clip: text; /* Clip the gradient to the text */
-    -webkit-text-fill-color: transparent; /* Make text transparent to reveal gradient */    
+    font-size: 5rem; /* set font size */
+    font-weight: bold; /* bold text */
+    background: linear-gradient(90deg, #852b9c, #bf5570, #852b9c); /* define the gradient */
+    -webkit-background-clip: text; /* clip the gradient to the text */
+    -webkit-text-fill-color: transparent; /* make text transparent to reveal gradient */    
     animation: moveup 1s linear forwards;
 }
 
@@ -44,8 +44,8 @@ nav {
     font-size: 5rem; 
     font-weight: bold; 
     background: transparent;
-    -webkit-text-stroke: 2px #f18add; /* Outline with desired color */
-    -webkit-text-fill-color: transparent; /* Make text transparent to reveal gradient */   
+    -webkit-text-stroke: 2px #f18add; /* outline with desired color */
+    -webkit-text-fill-color: transparent; /* make text transparent to reveal gradient */   
     animation: moveup 0.0001s linear forwards;
 
 }
@@ -59,17 +59,17 @@ nav {
 .hero {
     width: 100%;
     min-height: 100vh;
-    display: flex; /* Enable Flexbox */
+    display: flex; /* enable Flexbox */
     background-position: center;
     align-items: center;
     flex-direction: column;
-    justify-content: center; /* Center content horizontally */
+    justify-content: center; /* center content horizontally */
     background-size: cover;
     background-image: linear-gradient(
     rgba(0, 0, 0, 0.40), 
     rgba(0, 0, 0, 0.40) 
-  ), url('background.jpg'); /* Set your background image here */
-    /* Optional: Add a fallback background color */
+  ), url('background.jpg'); /* set your background image here */
+    /* optional: Add a fallback background color */
     background-color: #1a1a1a;
 }
 
@@ -84,15 +84,15 @@ nav {
 
 .text-section{
     text-align: center;
-    font-weight: normal; /* Bold text */
+    font-weight: normal; /* bold text */
 
 }
 
 .text-section h1 {
-    font-size: 2rem; /* Adjust font size as needed */
-    color: #fff; /* White text */
-    margin-bottom: 20px; /* Space below heading */
-    font-weight: normal; /* Regular weight */
+    font-size: 2rem; /* adjust font size as needed */
+    color: #fff; /* white text */
+    margin-bottom: 20px; /* space below heading */
+    font-weight: normal; /* regular weight */
 }
 
 .anim1 {
@@ -117,9 +117,9 @@ nav {
     background-image: linear-gradient(80deg, #bf5570, #30263f, #852b9c);
     font-size: 20px;
     border-radius: 40px;
-    opacity: 0; /* Initially hidden */
+    opacity: 0; /* initially hidden */
     animation: fadeIn 1s ease-in forwards;
-    animation-delay: 2.25s; /* Start after 1.75 seconds */
+    animation-delay: 2.25s; /* start after 1.75 seconds */
     font-weight: 100;
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
@@ -133,7 +133,7 @@ nav {
 }
 
 .btn.visible {
-    opacity: 1; /* Fully visible */
+    opacity: 1; /* fully visible */
 }
 
 .btn:hover {
@@ -141,7 +141,7 @@ nav {
     border-bottom-right-radius: 0;
 }
 
-/* Keyframes for the moveup animation */
+/* keyframes for the moveup animation */
 @keyframes moveup {
     from {
         opacity: 0;
