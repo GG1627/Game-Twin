@@ -1,9 +1,8 @@
-/* Existing imports and universal styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 body {
     margin: 0;
-    overflow: auto; /* Allows vertical and horizontal scrolling */
+    overflow: auto; /* allows vertical and horizontal scrolling */
     padding: 0;
     background-color: #1a1a1a;
     font-family: "Poppins", sans-serif !important;
@@ -17,13 +16,13 @@ body {
 }
 
 .hero {
-    overflow: auto; /* Allows vertical and horizontal scrolling */
+    overflow: auto; /* allows vertical and horizontal scrolling */
     width: 100%;
     overflow-x: auto;
     min-height: 100vh;
     background-position: center;
     background-size: cover;
-    white-space: nowrap; /* Prevent text and content from wrapping */
+    white-space: nowrap; /* prevent text and content from wrapping */
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.40), 
         rgba(0, 0, 0, 0.40)
@@ -32,7 +31,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; /* Added for positioning context */
+    position: relative; /* added for positioning context */
 }
 
 .container {
@@ -57,20 +56,20 @@ body {
 
 /* Navigation Styles */
 .nav1 {
-    flex: 1; /* Ensures equal space allocation for both nav1 and nav2 */
+    flex: 1; /* ensures equal space allocation for both nav1 and nav2 */
     display: flex;
-    margin-right: auto; /* Increase space between image-center and nav2 */
+    margin-right: auto; /* increase space between image-center and nav2 */
     gap: 100px;
-    flex-direction: column; /* Stack internal elements vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
+    flex-direction: column; /* stack internal elements vertically */
+    align-items: center; /* center horizontally */
+    justify-content: center; /* center vertically */
     text-align: center;
 }
 
 .nav2 {
-    flex: 1; /* Ensures equal space allocation for both nav1 and nav2 */
+    flex: 1; /* ensures equal space allocation for both nav1 and nav2 */
     display: flex;
-    margin-left: auto; /* Increase space between image-center and nav2 */
+    margin-left: auto; /* increase space between image-center and nav2 */
     gap: 100px;
     flex-direction: column; 
     align-items: center;
@@ -83,7 +82,7 @@ body {
     max-width: 100%; 
     font-size: 2rem; 
     font-weight: bold;
-    background: linear-gradient(360deg,#852b9c, #ffffff); /* Define the gradient */
+    background: linear-gradient(360deg,#852b9c, #ffffff); /* define the gradient */
     -webkit-text-fill-color: transparent; 
     -webkit-background-clip: text;
     animation: fadeIn 1s linear forwards;
@@ -101,51 +100,51 @@ body {
     animation: fadeIn 1s linear forwards;
     animation-delay: 1.80s;
     margin-bottom: 10px;
-    white-space: normal; /* Allow text to wrap to the next line */
-    word-wrap: break-word; /* Ensure long words break within the bounds */
-    overflow-wrap: break-word; /* Same as word-wrap but more compatible */
-    text-align: center; /* Center-align the wrapped text */
+    white-space: normal; /* allow text to wrap to the next line */
+    word-wrap: break-word; /* ensure long words break within the bounds */
+    overflow-wrap: break-word; /* same as word-wrap but more compatible */
+    text-align: center; /* center-align the wrapped text */
 }
 
-/* Time Display */
+/* time Display */
 .time-display {
     opacity: 0;
-    position: absolute; /* Remove from normal document flow */
-    top: 30px; /* Position at the top of the screen */
-    left: 50%; /* Center horizontally */
+    position: absolute; /* remove from normal document flow */
+    top: 30px; /* position at the top of the screen */
+    left: 50%; /* center horizontally */
     background: linear-gradient(360deg, #bf5570, #ffffff); 
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-    transform: translateX(-50%); /* Adjust to truly center */
-    font-size: 2.5rem; /* Adjust the font size */
+    transform: translateX(-50%); /* adjust to truly center */
+    font-size: 2.5rem; /* adjust the font size */
     font-weight: bold; 
     padding: 10px 20px;
-    z-index: 100; /* Ensure it stays above other elements */
+    z-index: 100; /* ensure it stays above other elements */
     animation: fadeIn 1s ease-in forwards; 
     animation-delay: 3s;
 }
 
 .btn {
-    position: absolute; /* Remove from normal document flow */
-    bottom: 16%; /* Position at the top of the screen */
-    left: 50%; /* Center horizontally */
+    position: absolute; /* remove from normal document flow */
+    bottom: 16%; /* position at the top of the screen */
+    left: 50%; /* center horizontally */
     cursor: pointer;
     display: inline-block;
-    transform: translateX(-50%); /* Adjust to truly center */
+    transform: translateX(-50%); /* adjust to truly center */
     text-decoration: none;
     color: #fff;
     background-image: linear-gradient(80deg, #bf5570, #30263f, #852b9c);
     padding: 10px 50px;
     font-size: 20px;
     border-radius: 40px;
-    opacity: 0; /* Initially hidden */
+    opacity: 0; /*iInitially hidden */
     animation: fadeIn 1s ease-in forwards;
     animation-delay: 3s;
     font-weight: 100;
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;
     transition: 0.5s;
-    z-index: 100; /* Ensure it stays above other elements */
+    z-index: 100; /* ensure it stays above other elements */
 }
 
 .nav-text {
@@ -156,10 +155,10 @@ body {
     animation: moveup 1s linear forwards;
 }
 
-/* Image Styles */
+/* image Styles */
 .image-center {
     width: 200px;
-    flex: 0 0 auto; /* Prevent flex-grow/shrink; maintain size */
+    flex: 0 0 auto; /* prevent flex-grow/shrink; maintain size */
     animation: spin-and-fade 3s ease-out forwards;
     animation-delay: 0.5s;
 }
@@ -172,8 +171,8 @@ body {
 }
 
 .wrapper2 {
-    flex: 0 0 auto; /* Prevent flex-grow/shrink; maintain size */
-    width: 450px; /* Set the desired width */
+    flex: 0 0 auto; /* prevent flex-grow/shrink; maintain size */
+    width: 450px; /* set the desired width */
     opacity: 0;
     background: transparent;
     border: 2px solid rgba(255, 255, 255, 0.5);
@@ -182,7 +181,7 @@ body {
     border-radius: 100px;
     padding: 30px 30px;
     display: flex;
-    flex-direction: column; /* Stack content vertically */
+    flex-direction: column; /* stack content vertically */
     align-items: center;
     margin-right: 40px;
     justify-content: flex-start; 
@@ -195,7 +194,7 @@ body {
 
 
 .wrapper1 {
-    flex: 0 0 auto; /* Prevent flex-grow/shrink; maintain size */
+    flex: 0 0 auto; /* prevent flex-grow/shrink; maintain size */
     width: 450px;
     opacity: 0;
     background: transparent;
@@ -227,7 +226,7 @@ body {
 }
 
 .game-item {
-    margin-bottom: 10px;   /* Adds some spacing between list items */
+    margin-bottom: 10px;   /* adds some spacing between list items */
 }
 
 @keyframes spin-and-fade {
@@ -263,8 +262,6 @@ body {
 }
 
 
-
-/* Optional: Scrollbar Styles (if needed) */
 ::-webkit-scrollbar {
     width: 12px;
     height: 12px;
