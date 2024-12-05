@@ -6,6 +6,7 @@ app = Flask(__name__)
 # global variables to store user inputs
 inputs = {}
 
+# define root route for welcome page
 @app.route('/')
 def welcome():
     return render_template('index.html')
@@ -28,13 +29,14 @@ def next_page():
     # handle GET request to render the form
     return render_template('next.html')
     
-
+# define the route for the sorting page where users select sorting options
 @app.route('/sorting', methods=['POST'])
 def sorting_page():
-    # check to see if game name is valid
+    # retrieve game name and console from the global `inputs` dictionary
     game_name = inputs.get('game_name', '').strip()
     game_console = inputs.get('game_console', '').strip()
 
+    # initally validate inputs to ensure no fields are empty
     if not game_name or not game_console:
         error_message = "Game could not be found in dataset"
         return render_template('next.html', error_message=error_message, game_name=game_name, game_console=game_console)
@@ -50,6 +52,8 @@ def sorting_page():
     cpp_executable = "./main.exe"
 
     input_data = f"{inputs['game_name']}\n{inputs['game_console']}\n{inputs['sorting_algorithm']}\n{inputs['search_criteria']}\n"
+
+    # Execute the C++ program with the provided inputs
     try:
         process = subprocess.run(
             [cpp_executable],
@@ -74,10 +78,11 @@ def sorting_page():
             if lines[i].strip().startswith(f"{len(formatted_output)+1}."):
                 # add the numbered line
                 entry = lines[i].strip()
-                # check if there's a next line with "Metacritic:" information
+                # check if the next line contains additional game details
                 if i + 1 < len(lines):
                     entry += f"\n{lines[i + 1].strip()}"
                 formatted_output.append(entry)
+         # retrieve the time taken for processing from the last line of the output
         if lines:
             time_taken = lines[-1].strip()
     except subprocess.CalledProcessError as e:
