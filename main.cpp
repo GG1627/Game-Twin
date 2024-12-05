@@ -10,8 +10,8 @@
 
 using namespace std;
 
-
 int main(){
+    // objects created for the operations needed to perform on the game vector
     ParseData op;
     SortingAlgorithms algo;
     op.ParseCSVFile();
@@ -41,10 +41,11 @@ int main(){
         cout << "Game not found." << endl;  // if game not found
     }
 
+    // creates a similar object to get the filtered vector and places it in a new vector
     Similar sim(op.games);
-
     vector<Game> similarGames = sim.extractParameters(gameName, gamePlatform);  // Call the function to get similar games
 
+    // gets user input for what selection and parameter and algorithm they want to sort by
     int selection;
     cout << "Select 1 for a QuickSort, Select 2 for a CocktailSort." << endl;
     cin >> selection;
@@ -53,12 +54,14 @@ int main(){
     cout << "Select 1 for sort by Metacritic, Select 2 for sort by Achievement Count, Select 3 for sort by Suggestion Count." << endl;
     cin >> sortBySelection;
 
+    // clock to keep track of how long the sort takes
     auto start = std::chrono::high_resolution_clock::now();
+
+    // input handling
     if(selection == 1) {
         if(sortBySelection == 1){
             algo.quickSortMetacritic(similarGames, 0 ,similarGames.size()-1);
             reverse(similarGames.begin(), similarGames.end());
-
         }
         else if(sortBySelection == 2){
             sim.findDifference(gameName, similarGames);
@@ -82,9 +85,11 @@ int main(){
         }
     }
 
+    // stops the clock and stores the result
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double, std::milli> elapsed = end - start;
 
+    // outputs the most similar games, as well as displays the time the sort took
     for(int p=0; p < 5; p++){
         cout <<  (p+1) << ". ";
         if(sortBySelection == 1) {
@@ -100,6 +105,5 @@ int main(){
             cout << "\n";
         }
     }
-
     std::cout << "Time of sorting method: " << elapsed.count() << " ms\n";
 }
