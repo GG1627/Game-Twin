@@ -7,6 +7,9 @@
 - Gael Garcia - https://github.com/GG1627
 - John Lewis - https://github.com/broncosfan915
 
+# Video Demo
+- https://www.youtube.com/watch?v=oJyvh-r1y1M&ab_channel=AlejandroGonzalez 
+
 # Technologies Used
 C++, Python, HTML, CSS, Flask, Django
 
