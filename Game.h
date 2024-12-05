@@ -21,6 +21,7 @@ public:
     unordered_set<string> gameGenres;
     unordered_set<string> gamePlatforms;
 
+    // constructor, used in the data parser to create the original game vector
     Game(const string& name,double metacritic, double rating, int suggestionsCount, int achievementCount, const unordered_set<string>& gameGenres,
          const unordered_set<string>& gamePlatforms){
         this->name = name;
@@ -32,6 +33,7 @@ public:
         this->gamePlatforms = gamePlatforms;
     }
 
+    //  Displays the parameters of the similar games (used for frontend) 
     void displayByMetacritic() const{
         cout << name << " - ";
         cout << "Metacritic Rating: " << metacritic << endl;
