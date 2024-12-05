@@ -19,7 +19,7 @@ Game Twin is a web application designed to help you relive the joy of your favor
 ### How It Works
 - We utilized a Kaggle dataset that had over 470,000 video game entries, as well as their respective genre, metacritic rating, achievement count, suggestion count, etc.
 - This dataset was parsed in C++ and sorted using Quick Sort and Cocktail Sort based on what parameters were requested to sort by.
-- Python, Django, and Flask were used to connect the C++ code to the HTML and CSS frontend. To do this, the subprocess Python module was employed to parse the output of the C++ code and capture results. These results were then passed to the frontend to be shown.
+- Python, Django, and Flask were used to connect the C++ code to the HTML and CSS front-end. To do this, the subprocess Python module was employed to parse the output of the C++ code and capture results. These results were then passed to the front-end to be shown.
 
 # Collecting Initial Data
 ![Screenshot 2024-12-04 124851](https://github.com/user-attachments/assets/2cef139c-e353-411d-9b42-5ff9197b72a8)
