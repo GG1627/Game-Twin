@@ -69,7 +69,6 @@ void SortingAlgorithms::cocktailSortAchievementCount(vector<Game>& games, int si
     }
 };
 
-
 void SortingAlgorithms::cocktailSortSuggestionsCount(vector<Game> &games, int size) {
     {
         bool swapped = true;
@@ -103,7 +102,7 @@ void SortingAlgorithms::cocktailSortSuggestionsCount(vector<Game> &games, int si
     }
 };
 
-// quicksorts cited from aman lecture slides
+// quicksorts cited from aman lecture slides (each sort has a partition as well)
 void SortingAlgorithms::quickSortMetacritic(vector<Game>& games, int low, int high) {
     if (low < high)
     {
@@ -112,7 +111,6 @@ void SortingAlgorithms::quickSortMetacritic(vector<Game>& games, int low, int hi
         quickSortMetacritic(games, pivot + 1, high);
     }
 }
-
 
 int SortingAlgorithms::partitionMetacritic(vector<Game> &games, int low, int high) {
     double pivot = games[low].metacritic;
@@ -138,7 +136,6 @@ int SortingAlgorithms::partitionMetacritic(vector<Game> &games, int low, int hig
     return down;
 }
 
-
 void SortingAlgorithms::quickSortAchievmentCount(vector<Game> &games, int low, int high) {
     if (low < high)
     {
@@ -147,7 +144,6 @@ void SortingAlgorithms::quickSortAchievmentCount(vector<Game> &games, int low, i
         quickSortAchievmentCount(games, pivot + 1, high);
     }
 }
-
 
 int SortingAlgorithms::partitionAchievmentCount(vector<Game> &games, int low, int high) {
     double pivot = games[low].achievementDifference;
@@ -173,7 +169,6 @@ int SortingAlgorithms::partitionAchievmentCount(vector<Game> &games, int low, in
     return down;
 }
 
-
 void SortingAlgorithms::quickSortSuggestionsCount(vector<Game> &games, int low, int high) {
     if (low < high)
     {
@@ -182,7 +177,6 @@ void SortingAlgorithms::quickSortSuggestionsCount(vector<Game> &games, int low, 
         quickSortSuggestionsCount(games, pivot + 1, high);
     }
 }
-
 
 int SortingAlgorithms::partitionSuggestionsCount(vector<Game> &games, int low, int high) {
     double pivot = games[low].suggestionsCount;
@@ -207,4 +201,3 @@ int SortingAlgorithms::partitionSuggestionsCount(vector<Game> &games, int low, i
     swap(games[low], games[down]);
     return down;
 }
-
