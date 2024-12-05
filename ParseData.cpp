@@ -86,9 +86,8 @@ void ParseData::ParseCSVFile() {
         getline(ss, added_status_dropped, ',');
         getline(ss, added_status_playing, ',');
 
-//        debugging
-//        cout << "name: " << name << ", rating: " << ratingStr << ", metacriticStr: '" << metacriticStr << "', ratingStr: '" << ratingStr << "'" << endl;
 
+        // making sure code works with empty cells from the CSV file
         if(metacriticStr.empty()){
             metacriticStr = "0";
         }
@@ -102,36 +101,37 @@ void ParseData::ParseCSVFile() {
             suggestions_count_str = "0";
         }
 
+        // convert strings to ints for later sorting use
         metacritic = stoi(metacriticStr);
         rating = stod(ratingStr);
         achievementCount = stoi(achievements_count);
-        //cout << "Suggestion Count: " << suggestions_count_str << endl;
         suggestionsCount = stoi(suggestions_count_str);
 
 
         if(metacriticStr != "0") {
+            // sets for cells with more than one value
             unordered_set<string> genresSet;
             unordered_set<string> platformsSet;
             unordered_set<string> publishersSet;
             size_t start = 0, end;
 
-            // Extract genres
+            // extract genres - multiple genres in one cell
             while ((end = genres.find("||", start)) != string::npos) {
-                genresSet.insert(genres.substr(start, end - start)); // Extract genre
-                start = end + 2;  // Move past "||"
+                genresSet.insert(genres.substr(start, end - start)); // extract genre
+                start = end + 2;  // move past "||"
             }
-            genresSet.insert(genres.substr(start));  // Add the last genre
+            genresSet.insert(genres.substr(start));  // add the last genre
 
-            start = 0;  // Reset the start position for platforms
+            start = 0;  // reset the start position for platforms
 
-            // Extract platforms (assuming platforms are also separated by "||")
+            // extract platforms - multiple plaforms in one cell
             while ((end = platforms.find("||", start)) != string::npos) {
-                platformsSet.insert(platforms.substr(start, end - start)); // Extract platform
-                start = end + 2;  // Move past "||"
+                platformsSet.insert(platforms.substr(start, end - start)); // extract platform
+                start = end + 2;  // move past "||"
             }
-            platformsSet.insert(platforms.substr(start));  // Add the last platform
+            platformsSet.insert(platforms.substr(start));  // add the last platform
 
-            // Add the game object with both genres and platforms sets
+            // add the game object with all neccessary values
             games.emplace_back(name, metacritic, rating, suggestionsCount, achievementCount, genresSet, platformsSet);
         }
 

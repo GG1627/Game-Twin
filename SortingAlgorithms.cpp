@@ -2,7 +2,9 @@
 #include <utility>
 using namespace std;
 
+
 //cocktail sorts cited from geeksforgeeks.org
+// sort by Metacritic
 void SortingAlgorithms::cocktailSortMetacritic(vector<Game>& games, int size) {
     {
         bool swapped = true;
@@ -36,6 +38,9 @@ void SortingAlgorithms::cocktailSortMetacritic(vector<Game>& games, int size) {
     }
 };
 
+
+//cocktail sorts cited from geeksforgeeks.org
+// sort by Achievement Count
 void SortingAlgorithms::cocktailSortAchievementCount(vector<Game>& games, int size) {
     {
         bool swapped = true;
@@ -69,6 +74,9 @@ void SortingAlgorithms::cocktailSortAchievementCount(vector<Game>& games, int si
     }
 };
 
+
+//cocktail sorts cited from geeksforgeeks.org
+// sort by Suggestion Count
 void SortingAlgorithms::cocktailSortSuggestionsCount(vector<Game> &games, int size) {
     {
         bool swapped = true;
@@ -102,7 +110,9 @@ void SortingAlgorithms::cocktailSortSuggestionsCount(vector<Game> &games, int si
     }
 };
 
-// quicksorts cited from aman lecture slides (each sort has a partition as well)
+
+// Quick Sort function - inspired by Aman Module 8 Sorting Lecture Slides
+// sort by Metacritic
 void SortingAlgorithms::quickSortMetacritic(vector<Game>& games, int low, int high) {
     if (low < high)
     {
@@ -112,6 +122,8 @@ void SortingAlgorithms::quickSortMetacritic(vector<Game>& games, int low, int hi
     }
 }
 
+
+// helper function for Quick Sort algorithm
 int SortingAlgorithms::partitionMetacritic(vector<Game> &games, int low, int high) {
     double pivot = games[low].metacritic;
     int up = low, down = high;
@@ -136,6 +148,9 @@ int SortingAlgorithms::partitionMetacritic(vector<Game> &games, int low, int hig
     return down;
 }
 
+
+// Quick Sort function - inspired by Aman Module 8 Sorting Lecture Slides
+// sort by Achievement Count
 void SortingAlgorithms::quickSortAchievmentCount(vector<Game> &games, int low, int high) {
     if (low < high)
     {
@@ -145,6 +160,8 @@ void SortingAlgorithms::quickSortAchievmentCount(vector<Game> &games, int low, i
     }
 }
 
+
+// helper function for Quick Sort algorithm
 int SortingAlgorithms::partitionAchievmentCount(vector<Game> &games, int low, int high) {
     double pivot = games[low].achievementDifference;
     int up = low, down = high;
@@ -169,6 +186,9 @@ int SortingAlgorithms::partitionAchievmentCount(vector<Game> &games, int low, in
     return down;
 }
 
+
+// Quick Sort function - inspired by Aman Module 8 Sorting Lecture Slides
+// sort by Suggestion Count
 void SortingAlgorithms::quickSortSuggestionsCount(vector<Game> &games, int low, int high) {
     if (low < high)
     {
@@ -178,6 +198,8 @@ void SortingAlgorithms::quickSortSuggestionsCount(vector<Game> &games, int low, 
     }
 }
 
+
+// helper function for Quick Sort algorithm
 int SortingAlgorithms::partitionSuggestionsCount(vector<Game> &games, int low, int high) {
     double pivot = games[low].suggestionsCount;
     int up = low, down = high;

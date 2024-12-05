@@ -5,6 +5,8 @@
 class ParseData {
     public:
         void ParseCSVFile();
+
+        // vector to hold all Game obejcts
         vector<Game> games;
 };
 
