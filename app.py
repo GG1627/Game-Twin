@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request
 import subprocess
+import os
+
 
 app = Flask(__name__)
 
@@ -98,4 +100,5 @@ def sorting_page():
     return render_template('final.html', games=formatted_output, game=game_name, time_taken=time_taken)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Get the port from the environment or use 5000 by default
+    app.run(debug=True, host="0.0.0.0", port=port)  # Listen on all interfaces (0.0.0.0)
