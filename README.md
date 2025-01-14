@@ -5,7 +5,7 @@
 # Collaborators:
 - Alejandro Gonzalez - https://github.com/alejgonza04
 - Gael Garcia - https://github.com/GG1627
-- John Lewis - https://github.com/broncosfan915
+- John Lewis - https://github.com/johnl-dev
 
 # Video Demo
 - https://www.youtube.com/watch?v=oJyvh-r1y1M&ab_channel=AlejandroGonzalez 
